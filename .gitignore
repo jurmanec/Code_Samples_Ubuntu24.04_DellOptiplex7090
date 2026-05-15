@@ -1,0 +1,44 @@
+### --- OS & IDEs (Global) ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.bak
+
+### --- C++ ---
+*.o
+*.a
+*.la
+*.lo
+*.so
+*.dylib
+build/
+bin/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+### --- Java ---
+*.class
+*.jar
+*.war
+*.ear
+target/
+.gradle/
+.metadata/
+
+### --- ROS 2 ---
+install/
+log/
+# Ignore build/ is already covered in C++ section
+.catkin_workspace
+.ament_cmake_python/
+
+### --- Python (Common in ROS 2) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/

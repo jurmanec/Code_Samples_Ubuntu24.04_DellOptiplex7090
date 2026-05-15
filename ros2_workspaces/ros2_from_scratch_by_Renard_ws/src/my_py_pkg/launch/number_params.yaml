@@ -1,0 +1,4 @@
+/number_publisher_node: # node name
+  ros__parameters: # params
+    number: 7
+    publish_period: 0.8

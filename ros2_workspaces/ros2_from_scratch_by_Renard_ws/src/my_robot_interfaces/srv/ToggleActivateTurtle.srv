@@ -1,0 +1,4 @@
+# No service body. When turtle is active, a request deactivates and vice versa
+---
+bool success
+string message
