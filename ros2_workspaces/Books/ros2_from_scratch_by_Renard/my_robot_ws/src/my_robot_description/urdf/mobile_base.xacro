@@ -14,6 +14,14 @@
                 <material name="grey" />
                 <origin xyz="0.0 0.0 0.0" rpy="${pi / 2.0} 0.0 0.0"/>
             </visual>
+            <collision>
+                <geometry>
+                    <sphere radius="${wheel_radius}" />
+                </geometry>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+            </collision>
+            <xacro:cylinder_inertia m="1.0" r="${wheel_radius}" l="${wheel_length}" 
+                                    o_xyz="0 0 0" o_rpy="${pi / 2.0} 0 0" />
         </link>
     </xacro:macro>
     <link name="base_link">
@@ -23,7 +31,15 @@
             </geometry>
             <origin xyz="0.0 0.0 ${base_height / 2.0}" rpy="0.0 0.0 0.0"/>
             <material name="green" />
-        </visual>    
+        </visual>   
+        <xacro:box_inertia m="5.0" x="${base_length}" y="${base_width}" z="${base_height}" 
+                           o_xyz="0 0 ${base_height / 2.0}" o_rpy="0 0 0" /> 
+        <collision>
+            <geometry>
+                <box size="${base_length} ${base_width} ${base_height}" />
+            </geometry>
+            <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+        </collision>
     </link>
     <xacro:wheel_link prefix="right" />
     <xacro:wheel_link prefix="left" />
@@ -35,6 +51,14 @@
                 <material name="grey"/>
             </geometry>
         </visual>
+        <xacro:sphere_inertia m="0.5" r="${wheel_radius / 2.0}" 
+                              o_xyz="0 0 0" o_rpy="0 0 0" />
+        <collision>
+            <geometry>
+                <sphere radius="${wheel_radius / 2.0}" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </collision>
     </link>
     <joint name="base_right_wheel_joint" type="continuous">
         <parent link="base_link"/>
