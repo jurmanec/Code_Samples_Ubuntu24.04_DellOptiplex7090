@@ -28,6 +28,11 @@ enum class Size {
 };
 
 
+template <typename T> struct AndSpecification;
+
+
+
+
 int main() {
 
     cout << "Hello Design Patterns!!" << endl;
