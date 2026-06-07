@@ -1,0 +1,13 @@
+
+For Vibration (most important for civil inspection):
+
+Normal operation: 0.2 – 1.5 (random walk around 0.8)
+Occasional small events: spikes up to 2.5
+Warning level: 3.0 – 4.5
+Critical: 6.0+
+
+For Temperature:
+
+Normal: 18 – 32 °C (slow daily variation)
+Warning: 40 – 48 °C
+Critical: 55+ °C or sudden drops below 5 °C
